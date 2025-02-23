@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Translate Visualizer",
+  "version": "1.4",
+  "description": "Enhances Google Translate with secure image search",
+  "permissions": ["activeTab", "clipboardWrite", "storage", "scripting"],
+  "host_permissions": [
+    "*://translate.google.com/*",
+    "https://api.pexels.com/*",
+    "https://translation.googleapis.com/*",
+    "https://my-extension-worker.ssv5593.workers.dev/api-keys",
+    "http://localhost:5000/*"  
+  ],
+  "action": {
+    "default_popup": "sidebar.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://translate.google.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

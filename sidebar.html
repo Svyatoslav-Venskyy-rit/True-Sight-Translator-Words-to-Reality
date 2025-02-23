@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translate Visualizer</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div id="sidebar">
+    <div id="controls">
+      <!-- Buttons container for horizontal alignment -->
+      <div id="button-container">
+        <button id="backBtn">← Back</button>
+        <button id="forwardBtn">Forward →</button>
+        <button id="refreshBtn">⟳ Reload</button>
+      </div>
+      <h3 id="query-display"></h3>
+    </div>
+    
+    <div id="loading">
+      <div class="spinner">🔄</div>
+      <div>Searching Pexels...</div>
+    </div>
+    <div id="error" hidden></div>
+    <div id="empty" hidden>No images found. Try another word.</div>
+    
+    <div class="grid" id="imageGrid"></div>
+  </div>
+  
+  <script src="sidebar.js"></script>
+</body>
+</html>
