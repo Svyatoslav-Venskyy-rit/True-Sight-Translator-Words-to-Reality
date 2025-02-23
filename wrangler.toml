@@ -1,0 +1,16 @@
+name = "my-extension-worker"
+type = "javascript"
+
+# The account ID should be the ID you obtained earlier from Cloudflare
+account_id = "a573e7d93281256a759f6d9006900999"
+
+workers_dev = true
+compatibility_date = "2025-02-14"
+
+[[env.variables]]
+name = "RfQu90uAZGrPwO6yMmrsRNfcGqRRFbEjAI2x73DDmxEbjb5kUnUqZdzp"
+value = "your-pexels-api-key"
+
+[[env.variables]]
+name = "AIzaSyClHyxBOh_lYDug4v14zGRHxu4WHAtyjY8"
+value = "your-google-api-key"
